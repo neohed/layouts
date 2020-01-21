@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/grid.css">
   <style>
-    .wrapper {
+    .layout-container {
       display: grid;
-      grid-gap: 10px;
-      grid-template-columns: 120px  120px  120px;
       grid-template-areas:
         "header header  header"
         "sidebar content content";
+      grid-template-columns: 200px;
+      grid-template-rows: auto 1fr;
+
+      height: 100vh;
+      grid-gap: 10px;
+
       background-color: #fff;
       color: #444;
     }
@@ -41,10 +45,10 @@
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="box header">Header</div>
-    <div class="box sidebar">Sidebar</div>
-    <div class="box content">Content</div>
+  <div class="layout-container">
+    <header class="box header">Header</header>
+    <nav class="box sidebar">Sidebar</nav>
+    <main class="box content">Content</main>
   </div>
 </body>
 </html>
